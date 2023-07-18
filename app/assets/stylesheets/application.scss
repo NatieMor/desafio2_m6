@@ -14,3 +14,24 @@
  *= require_self
  */
  @import "bootstrap";
+ .navbar { text-decoration-color: antiquewhite;
+
+ }
+
+ body {
+    font-family: var(--font-default);
+    color: var(--color-default);
+    background-image: url('vendedores.jpg');
+    background-color: rgb(196, 131, 131);
+    }
+  
+    :root {
+      --color-default: #1f0303;
+      --color-primary: #1f8860;
+      --color-secondary: #161718;
+    }
+    :root {
+      --font-default: "Open Sans", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      --font-primary: "Inter", sans-serif;
+      --font-secondary: "Cardo", sans-serif;
+    }
