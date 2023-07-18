@@ -1,7 +1,21 @@
+body{
+  background-color: #005CBF;
+  color: #FFB500;
+  background-image: url(th.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  }
+
+
 body {
-    font-family: var(--font-default);
-    color: var(--color-default);
-    background-color: paleturquoise;
+     background-color: paleturquoise;;
+      color: var(--color-default);
+      background-image: url();
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      font-family: var(--font-default);
   }
 
 h1,
