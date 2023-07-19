@@ -21,8 +21,11 @@
  body {
     font-family: var(--font-default);
     color: var(--color-default);
-    background-image: url('vendedores.jpg');
-    background-color: rgb(196, 131, 131);
+    background-image: url('noticia.jpg');
+    background-repeat: no-repeat;
+    background-color: rgba(196, 131, 131, 0.31);
+    background-position: center center;
+    background-size: cover;
     }
   
     :root {

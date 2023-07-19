@@ -2,6 +2,7 @@ class NewsController < ApplicationController
   before_action :set_news, only: %i[ show edit update destroy ]
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+
   # GET /news or /news.json
   def index
     @news = News.all
@@ -66,14 +67,12 @@ class NewsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def news_params
-      params.require(:news).permit(:title, :body, :user)
+      params.require(:news).permit(:title, :body, :user, :comment_id,)
     end
     def configure_sign_up_params
       devise_parameter_sanitizer.permit(:sign_up, keys: [:title, :body, :user,])
     end
 
-    def after_sign_in_path_for(resource)
-      news_path
-  end
+    
 
 end

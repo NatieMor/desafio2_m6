@@ -66,10 +66,17 @@ class CommentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comment_params
-      params.require(:comment).permit(:title, :body, :user)
+      params.require(:comment).permit(:title, :body, :user, :user_id,)
     end
 
     def configure_sign_up_params
       devise_parameter_sanitizer.permit(:sign_up, keys: [:title, :body, :user,])
     end
+
+    def authorize_request(kind = nil)
+      unless kind.include?(current_user.role)
+          redirect_to news_path, notice: "no estas autorizado para realizar esta acción"
+      end
+    end 
+
 end
