@@ -1,5 +1,5 @@
 class NewsController < ApplicationController
-  before_action :set_news, only: %i[ show edit update destroy ]
+  before_action :set_news, only: %i[ show edit update destroy create ]
   before_action :configure_permitted_parameters, if: :devise_controller?
 
 
@@ -10,6 +10,9 @@ class NewsController < ApplicationController
 
   # GET /news/1 or /news/1.json
   def show
+    @news = News.find(params[:id])
+    @comments = Comment.where(news_id: @news.id)
+    @comment = @news.comments.build
   end
 
   # GET /news/new

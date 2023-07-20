@@ -15,24 +15,24 @@
  */
  @import "bootstrap";
  .navbar { text-decoration-color: antiquewhite;
+}
 
- }
+    body {
+  margin: 0;
+  font-family: var(--font-default);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--color-default);
+  text-align: var(--bs-body-text-align);
+  background-color: rgba(196, 131, 131, 0.31);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 
- body {
-    font-family: var(--font-default);
-    color: var(--color-default);
-    background-image: url('noticia.jpg');
-    background-repeat: no-repeat;
-    background-color: rgba(196, 131, 131, 0.31);
-    background-position: center center;
-    background-size: cover;
-    }
-  
-    :root {
-      --color-default: #1f0303;
-      --color-primary: #1f8860;
-      --color-secondary: #161718;
-    }
     :root {
       --font-default: "Open Sans", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
       --font-primary: "Inter", sans-serif;
