@@ -1,7 +1,6 @@
 class NewsController < ApplicationController
-  before_action :set_news, only: %i[ show edit update destroy create ]
-  before_action :configure_permitted_parameters, if: :devise_controller?
-
+  before_action :set_news, only: %i[ show edit create update destroy create ]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /news or /news.json
   def index
